@@ -1,0 +1,75 @@
+.top-text {
+    background-image: url('dinner.jpg');
+    height: calc(100vh - 134px);
+    position: relative;
+    background-position: center;
+  
+    .top-inner-text {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      -webkit-text-stroke: 1px rgba(51, 51, 51, 1);
+  
+      @media screen and (max-width: 767px) {
+        font-size: 2rem;
+      }
+    }
+
+    .top-explanation {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      margin: 0px;
+      text-align: center;
+    }
+
+    .top-explanation h2 {
+      font-size: 2rem;
+      color: white;
+      -webkit-text-stroke: 1px rgba(51, 51, 51, 1);
+    }
+
+    .top-explanation h3 {
+      color: white;
+      -webkit-text-stroke: 1px rgba(51, 51, 51, 1);
+    }
+
+    .diagnosis-btn {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      text-align: center;
+      margin : 0px;
+      text-decoration: none; /* 下線を削除 */
+      font-size: 40px;
+      color: rgba(51, 51, 51, 1);
+      background-color: rgba(238, 130, 125, 1);
+      box-shadow:0 7px rgb(228, 75, 67);
+    }
+
+    .btn {
+      padding:8px 24px;
+      display:inline-block;
+      border-radius:8px;
+    }
+
+    .btn:hover {
+      background-color: rgb(233, 113, 107);
+      box-shadow:0 7px rgb(226, 65, 56);
+    }
+
+    .diagnosis-btn:active {
+      box-shadow:none;
+      position: absolute;
+      top: 81%;
+    }
+  }
