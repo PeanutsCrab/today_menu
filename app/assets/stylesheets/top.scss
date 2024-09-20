@@ -57,18 +57,18 @@
     }
 
     .btn {
-      padding:8px 24px;
-      display:inline-block;
-      border-radius:8px;
+      padding: 8px 24px;
+      display: inline-block;
+      border-radius: 8px;
     }
 
     .btn:hover {
       background-color: rgb(233, 113, 107);
-      box-shadow:0 7px rgb(226, 65, 56);
+      box-shadow: 0 7px rgb(226, 65, 56);
     }
 
     .diagnosis-btn:active {
-      box-shadow:none;
+      box-shadow: none;
       position: absolute;
       top: 81%;
     }
