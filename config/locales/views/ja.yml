@@ -1,0 +1,45 @@
+ja:
+  helpers:
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+    label:
+      email: メールアドレス
+      password: パスワード
+  user_sessions:
+    new:
+      title: ログイン
+      login: ログイン
+      to_register_page: 登録ページへ
+      password_forget: パスワードをお忘れの方はこちら
+    create:
+      success: ログインしました
+      failure: ログインに失敗しました
+    destroy:
+      success: ログアウトしました
+  menus:
+    index:
+      today_menus: 今日何食べる？
+      diagnosis: 診断スタート！
+  users:
+    new:
+      title: ユーザー登録
+      to_login_page: ログインページへ
+    create:
+      success: ユーザー登録が完了しました
+      failure: ユーザー登録に失敗しました
+  header:
+    my_page: マイページ
+    create_user: 会員登録
+    login: ログイン
+    logout: ログアウト
+    profile: 会員情報変更
+    board: 献立投稿
+    board_index: 投稿一覧
+    bookmark_index: お気に入り一覧
+    line: LINE通知
+  footer:
+    inquiry: お問い合わせ
+    terms: 利用規約
+    privacy: プライバシーポリシー

@@ -1,0 +1,19 @@
+<header>
+  <nav class='navbar'>
+    <%= link_to t('menus.index.today_menus'), root_path, class: 'navbar-brand' %>
+    <div class='navbar-user'>
+      <div class='dropdown-divider'></div>
+      <div class='navbar-item' id='hamburger-menu'>
+        <%= t('header.my_page') %>
+        <div class='menu-content' id='menu-content'>
+          <%= link_to t('header.profile'), '#', class: 'menu-item' %>
+          <%= link_to t('header.board'), '#', class: 'menu-item' %>
+          <%= link_to t('header.board_index'), '#', class: 'menu-item' %>
+          <%= link_to t('header.bookmark_index'), '#', class: 'menu-item' %>
+          <%= link_to t('header.line'), '#', class: 'menu-item' %>
+          <%= link_to t('header.logout'), logout_path, class: 'menu-item', data: { turbo_method: :delete } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
