@@ -1,4 +1,9 @@
 ja:
+  defaults:
+    flash_message:
+      created: "%{item}を作成しました"
+      not_created: "%{item}を作成出来ませんでした"
+      require_login: ログインしてください
   helpers:
     submit:
       create: 登録
@@ -19,9 +24,13 @@ ja:
     destroy:
       success: ログアウトしました
   menus:
-    index:
+    top:
       today_menus: 今日何食べる？
       diagnosis: 診断スタート！
+    new:
+      title: 献立作成
+    index:
+      no_result: 投稿がありません
   users:
     new:
       title: ユーザー登録
