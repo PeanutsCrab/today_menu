@@ -2,7 +2,8 @@
   <div class="row">
     <div class="form">
       <h1><%= t('.title') %></h1>
-      <%= form_with model: @menu, class: "new_board" do |f| %>
+      <%= form_with model: @menu, url: menus_path, class: "new_board" do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
         <div class="mb-3">
           <%= f.label :name, t('activerecord.attributes.menu.name') %>
           <%= f.text_field :name, class: "form-control" %>
