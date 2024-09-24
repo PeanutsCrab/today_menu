@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_21_052845) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_menus_on_name", unique: true
     t.index ["user_id"], name: "index_menus_on_user_id"
   end
 

@@ -3,6 +3,33 @@ ja:
     models:
       user: ユーザー
       menu: 献立
+    errors:
+      messages:
+        blank: "入力必須です"
+        too_short: "短すぎます"
+        too_long: "長すぎます"
+        confirmation: "一致しません"
+      models:
+        menu:
+          attributes:
+            name:
+              blank: "名前を入力してください"
+              taken: "この料理名はすでに投稿されています"
+            material:
+              blank: "材料を入力してください"
+            process:
+              blank: "作り方を入力してください"
+        user:
+          attributes:
+            email:
+              blank: "メールアドレスを入力してください"
+              invalid: "無効なメールアドレスです"
+              taken: "このメールアドレスはすでに使用されています"
+            password:
+              blank: "パスワードを入力してください"
+              too_short: "パスワードは少なくとも6文字必要です"
+            password_confirmation:
+              blank: "パスワードを入力してください"
     attributes:
       user:
         email: メールアドレス
