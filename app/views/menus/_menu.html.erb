@@ -1,0 +1,22 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="menu-id-<%= menu.id %>">
+    <div class="card">
+      <%= image_tag "board_placeholder.png", class: "card-img-top", width: "300", height:"200" %>
+      <div class="card-body">
+        <div class="d-flex">
+          <h4 class="card-name">
+            <%= link_to menu.name, '#' %>
+          </h4>
+          <div class='ms-auto'>
+            <%= link_to '#', id: 'button-edit-#{menu.id}' do %>
+              <i class="bi bi-pencil-fill"></i>
+            <% end %>
+            <%= link_to '#', id: 'button-delete-#{menu.id}', method: :delete, data: {confirm: ''} do %>
+              <i class="bi bi-trash-fill"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
