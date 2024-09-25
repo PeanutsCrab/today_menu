@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  skip_before_action :require_login, only: %i[top]
+  skip_before_action :require_login, only: %i[top suggest]
 
   def top; end
 
@@ -19,6 +19,10 @@ class MenusController < ApplicationController
       flash.now[:danger] = t('defaults.flash_message.not_created', item: Menu.model_name.human)
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def suggest
+    @menus = Menu.order("RANDOM()").first # ランダムに献立を取得
   end
 
   private
