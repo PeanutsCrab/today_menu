@@ -30,7 +30,10 @@ ja:
     new:
       title: 献立作成
     index:
+      title: 投稿一覧
       no_result: 投稿がありません
+    suggest:
+      title: 献立提案
   users:
     new:
       title: ユーザー登録
