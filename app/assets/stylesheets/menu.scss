@@ -21,6 +21,17 @@
   flex-direction: column; /* 縦に並べる */
 }
 
+.menu-detail-board {
+  flex: 1 1 calc(25% - 20px); /* ボードの幅を25%に設定し、マージンを引く */
+  margin: 10px; /* ボード間の余白 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 影を付ける */
+  border-radius: 8px; /* 角を丸くする */
+  overflow: hidden; /* 内容がはみ出ないように */
+  background-color: #ffffff; /* 背景色 */
+  transition: transform 0.2s; /* ホバー時のアニメーション */
+  display: flex; /* フレックスボックスを使用 */
+}
+
 .menu-board:hover {
   transform: scale(1.05); /* ホバー時に少し拡大 */
 }

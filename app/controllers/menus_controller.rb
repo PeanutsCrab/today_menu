@@ -11,6 +11,10 @@ class MenusController < ApplicationController
     @menu = Menu.new
   end
 
+  def show
+    @menu = Menu.find(params[:id])
+  end
+
   def create
     @menu = current_user.menus.build(menu_params)
     if @menu.save
