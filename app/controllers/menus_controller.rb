@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  skip_before_action :require_login, only: %i[top suggest]
+  skip_before_action :require_login, only: %i[top suggest search]
 
   def top; end
 
@@ -25,9 +25,18 @@ class MenusController < ApplicationController
     @menus = Menu.order("RANDOM()").first # ランダムに献立を取得
   end
 
+  def search
+    @search_form = SearchMenusForm.new(search_menu_params)
+    @search_results = @search_form.search
+  end
+
   private
 
   def menu_params
     params.require(:menu).permit(:name, :material, :process)
+  end
+
+  def search_menu_params
+    params.fetch(:q, {}).permit(:name, :material)
   end
 end

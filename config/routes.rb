@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :menus, only: %i[index new create] do
     collection do
       get :suggest
+      get :search
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

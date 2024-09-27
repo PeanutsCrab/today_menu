@@ -34,6 +34,16 @@ ja:
       no_result: 投稿がありません
     suggest:
       title: 献立提案
+      today_menu_is: 今日の献立は
+      lets_today_menu: にしましょう
+    search:
+      title: 検索結果
+      not_search: 該当する献立が見つかりませんでした
+    search_form:
+      placeholders:
+        name: 料理名で検索
+        material: 食材で検索
+      submit: 検索
   users:
     new:
       title: ユーザー登録
