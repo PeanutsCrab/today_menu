@@ -1,0 +1,10 @@
+<% content_for(:title, t('.title')) %>
+<div class="top-suggest">
+  <% if @search_results %>
+    <h2><%= t('menus.suggest.today_menu_is') %></h2>
+    <%= render 'menu', menu: @search_results %>
+    <h2><%= t('menus.suggest.lets_today_menu') %></h2>
+  <% else %>
+    <p><%= t('.not_search') %></p>
+  <% end %>
+</div>

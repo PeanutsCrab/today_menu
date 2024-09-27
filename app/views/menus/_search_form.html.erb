@@ -1,0 +1,19 @@
+<ul class="list-inline">
+  <li>
+    <%= form_with model: search_form, url: search_menus_path, scope: :q, method: :get, html: { class: 'form-inline' } do |f| %>
+      <table>
+        <tr>
+          <td>
+            <%= f.search_field :name, placeholder: t('menus.search_form.placeholders.name'), class: 'form-control' %>
+          </td>
+          <td>
+            <%= f.search_field :material, placeholder:  t('menus.search_form.placeholders.material'), class: 'form-control' %>
+          </td>
+          <td>
+            <%= f.submit t('menus.search_form.submit'), class: "btn btn-primary form-control" %>
+          </td>
+        </tr>
+      </table>
+    <% end %>
+  </li>
+</ul>
