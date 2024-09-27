@@ -32,6 +32,10 @@ ja:
     index:
       title: 投稿一覧
       no_result: 投稿がありません
+    show:
+      title: 献立詳細
+      material: 材料
+      process: 手順
     suggest:
       title: 献立提案
       today_menu_is: 今日の献立は

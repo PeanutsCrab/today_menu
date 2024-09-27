@@ -5,7 +5,7 @@
       <div class="card-body">
         <div class="d-flex">
           <h4 class="card-name">
-            <%= link_to menu.name, '#' %>
+            <%= link_to menu.name, menu_path(menu) %>
           </h4>
           <div class='ms-auto'>
             <%= link_to '#', id: 'button-edit-#{menu.id}' do %>
