@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  skip_before_action :require_login, only: %i[top suggest search]
+  skip_before_action :require_login, only: %i[top suggest show search]
 
   def top; end
 
@@ -15,6 +15,10 @@ class MenusController < ApplicationController
     @menu = Menu.find(params[:id])
   end
 
+  def edit
+    @menu = current_user.menus.find(params[:id])
+  end
+
   def create
     @menu = current_user.menus.build(menu_params)
     if @menu.save
@@ -23,6 +27,22 @@ class MenusController < ApplicationController
       flash.now[:danger] = t('defaults.flash_message.not_created', item: Menu.model_name.human)
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def update
+    @menu = current_user.menus.find(params[:id])
+    if @menu.update(menu_params)
+      redirect_to menu_path(@menu), success: t('defaults.flash_message.updated', item: Menu.model_name.human)
+    else
+      flash.now[:danger] = t('defaults.flash_message.not_updated', item: Menu.model_name.human)
+      render edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    menu = current_user.menus.find(params[:id])
+    menu.destroy!
+    redirect_to menus_path, success: t('defaults.flash_message.deleted', item: Menu.model_name.human)
   end
 
   def suggest

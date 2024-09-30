@@ -1,0 +1,19 @@
+<div class="form">
+<h1><%= t(".#{title_key}.title") %></h1>
+<%= form_with model: menu, class: "new_board" do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="mb-3">
+    <%= f.label :name, t('activerecord.attributes.menu.name') %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :material, t('activerecord.attributes.menu.material') %>
+    <%= f.text_field :material, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :process, t('activerecord.attributes.menu.process') %>
+    <%= f.text_area :process, class: "form-control", rows: "10" %>
+  </div>
+  <%= f.submit nil, class: "btn btn-primary" %>
+<% end %>
+</div>

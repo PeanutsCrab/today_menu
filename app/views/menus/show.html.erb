@@ -7,15 +7,17 @@
           <!-- image_tag @menu.menu_image_url, width: "300", height: "200", class: "card-img-top img-fluid" -->
         </div>
         <div class="col-md-9">
-          <h3 style="display: inline;"><%= @menu.name %></h3>
-          <div class='d-flex justify-content-end'>
-            <%= link_to "#", id: "button-edit-#{@menu.id}" do %>
-              <i class='bi bi-pencil-fill'></i>
-            <% end %>
-            <%= link_to "#", id: "button-delete-#{@menu.id}", class: "ms-2" do %>
-              <i class="bi bi-trash-fill"></i>
-            <% end %>
-          </div>
+          <% if current_user && current_user.own?(@menu) %>
+            <h3 style="display: inline;"><%= @menu.name %></h3>
+            <div class='d-flex justify-content-end'>
+              <%= link_to edit_menu_path(@menu), id: "button-edit-#{@menu.id}" do %>
+                <i class='bi bi-pencil-fill'></i>
+              <% end %>
+              <%= link_to menu_path(@menu), id: "button-delete-#{@menu.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
+                <i class="bi bi-trash-fill"></i>
+              <% end %>
+            </div>
+          <% end %>
         </div>
       </div>
       <div class="card-body">
