@@ -8,11 +8,13 @@
             <%= link_to menu.name, menu_path(menu) %>
           </h4>
           <div class='ms-auto'>
-            <%= link_to '#', id: 'button-edit-#{menu.id}' do %>
-              <i class="bi bi-pencil-fill"></i>
-            <% end %>
-            <%= link_to '#', id: 'button-delete-#{menu.id}', method: :delete, data: {confirm: ''} do %>
-              <i class="bi bi-trash-fill"></i>
+            <% if current_user && current_user.own?(menu) %>
+              <%= link_to edit_menu_path(menu), id: 'button-edit-#{menu.id}' do %>
+                <i class="bi bi-pencil-fill"></i>
+              <% end %>
+              <%= link_to menu_path(menu), id: 'button-delete-#{menu.id}', data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
+                <i class="bi bi-trash-fill"></i>
+              <% end %>
             <% end %>
           </div>
         </div>
