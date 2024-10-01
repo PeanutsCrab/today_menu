@@ -4,6 +4,7 @@ class Menu < ApplicationRecord
   validates :process, presence: true, length: { maximum: 65_535 }
 
   belongs_to :user
+  has_many :likes, dependent: :destroy
 
   scope :name_contain, ->(name) { where('name LIKE ?', "%#{name}%") }
   scope :material_contain, ->(material) { where('material LIKE ?', "%#{material}%") }

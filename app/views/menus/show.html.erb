@@ -7,8 +7,8 @@
           <!-- image_tag @menu.menu_image_url, width: "300", height: "200", class: "card-img-top img-fluid" -->
         </div>
         <div class="col-md-9">
+          <h3 style="display: inline;"><%= @menu.name %></h3>
           <% if current_user && current_user.own?(@menu) %>
-            <h3 style="display: inline;"><%= @menu.name %></h3>
             <div class='d-flex justify-content-end'>
               <%= link_to edit_menu_path(@menu), id: "button-edit-#{@menu.id}" do %>
                 <i class='bi bi-pencil-fill'></i>
@@ -16,6 +16,10 @@
               <%= link_to menu_path(@menu), id: "button-delete-#{@menu.id}", data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm') } do %>
                 <i class="bi bi-trash-fill"></i>
               <% end %>
+            </div>
+          <% elsif current_user %>
+            <div class='d-flex justify-content-end'>
+              <%= render 'like_buttons', { menu: @menu } %>
             </div>
           <% end %>
         </div>

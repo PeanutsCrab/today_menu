@@ -54,6 +54,10 @@ class MenusController < ApplicationController
     @search_results = @search_form.search
   end
 
+  def likes
+    @like_menus = current_user.likes_menus.includes(:user)
+  end
+
   private
 
   def menu_params
