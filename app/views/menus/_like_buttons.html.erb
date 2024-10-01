@@ -1,0 +1,7 @@
+<div class='like-button'>
+  <% if current_user.likesmenu?(menu) %>
+    <%= render 'unlike_button', { menu: menu } %>
+  <% else %>
+    <%= render 'like_button', { menu: menu } %>
+  <% end %>
+</div>

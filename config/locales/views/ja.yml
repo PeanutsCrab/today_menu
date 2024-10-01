@@ -60,6 +60,9 @@ ja:
         title: 献立作成
       edit:
         title: 献立編集
+    likes:
+      title: お気に入り一覧
+      no_result: お気に入りの献立はありません
   users:
     new:
       title: ユーザー登録

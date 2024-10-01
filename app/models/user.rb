@@ -7,8 +7,22 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
 
   has_many :menus, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :likes_menus, through: :likes, source: :menu
 
   def own?(object)
     id == object&.user_id
+  end
+
+  def likemenu(menu)
+    likes_menus << menu
+  end
+
+  def unlikemenu(menu)
+    likes_menus.destroy(menu)
+  end
+
+  def likesmenu?(menu)
+    likes_menus.include?(menu)
   end
 end
