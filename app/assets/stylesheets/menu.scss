@@ -1,7 +1,3 @@
-.top-suggest {
-  margin-bottom: 20px; /* セクション間の余白 */
-}
-
 .row {
   display: flex; /* フレックスボックスを使用 */
   flex-wrap: wrap; /* アイテムが折り返すように */
@@ -16,9 +12,10 @@
   overflow: hidden; /* 内容がはみ出ないように */
   background-color: #ffffff; /* 背景色 */
   transition: transform 0.2s; /* ホバー時のアニメーション */
-  max-height: 300px; /* 最大高さを設定 */
+  max-height: 256px;
   display: flex; /* フレックスボックスを使用 */
   flex-direction: column; /* 縦に並べる */
+  max-width: 340px;  /* お好みの最大幅に設定 */
 }
 
 .menu-detail-board {
@@ -43,10 +40,10 @@
   flex-direction: column; /* 縦に並べる */
 }
 
-.card-img-top {
-  width: 100%; /* 画像の幅を100%に */
-  height: auto; /* 高さは自動調整 */
-}
+/*.card-img-top {
+  width: 100%;  画像の幅を100%に
+  height: auto;  高さは自動調整
+} */
 
 .card-body {
   display: flex; /* フレックスボックスを使用 */
