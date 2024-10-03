@@ -35,7 +35,7 @@ class MenusController < ApplicationController
       redirect_to menu_path(@menu), success: t('defaults.flash_message.updated', item: Menu.model_name.human)
     else
       flash.now[:danger] = t('defaults.flash_message.not_updated', item: Menu.model_name.human)
-      render edit, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
@@ -61,7 +61,7 @@ class MenusController < ApplicationController
   private
 
   def menu_params
-    params.require(:menu).permit(:name, :material, :process)
+    params.require(:menu).permit(:name, :material, :process, :menu_image, :menu_image_cache)
   end
 
   def search_menu_params
