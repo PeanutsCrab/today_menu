@@ -1,3 +1,19 @@
+body {
+  height: 100%; /* 高さを100%に設定 */
+  margin: 0; /* デフォルトのマージンを削除 */
+}
+
+.layout {
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  min-height: 100vh; /* 最小高さを100vhに設定 */
+}
+
+.content {
+  flex: 1; /* 残りのスペースを埋める */
+  overflow: auto; /* スクロール可能にする */
+}
+
 .top-text {
   background-image: url('dinner.jpg');
   height: calc(100vh - 134px);
@@ -5,91 +21,78 @@
   background-position: center;
   background-size: cover; // 背景画像をカバー
   padding: 20px;
+  display: flex;
+  flex-direction: column; // 縦に並べる
+  justify-content: center; // 垂直中央揃え
+  align-items: center; // 水平中央揃え
 
   .top-inner-text {
-      position: absolute;
-      top: 20%; // 調整
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      margin-bottom: 10px;
-      text-align: center;
-      font-size: 3rem;
-      color: white;
-      -webkit-text-stroke: 1px rgba(51, 51, 51, 0.7); // 薄く
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // テキストに影を追加
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    color: white;
+    -webkit-text-stroke: 1px rgba(51, 51, 51, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
-      @media screen and (max-width: 767px) {
-        font-size: 2.5rem; // スマホ用のサイズ
-        top: 10%; // スマホでは上に移動
-      }
+    @media screen and (max-width: 767px) {
+      font-size: 2.5rem; // スマホ用のサイズ
+    }
   }
 
   .top-explanation {
-      position: absolute;
-      top: 40%; // 調整
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%; // 幅を広げる
-      margin: 0;
-      text-align: center;
+    text-align: center;
+    width: 90%; // 幅を広げる
 
-      h2 {
-          font-size: 2rem;
-          margin: 15px 0;
-          color: white;
-          -webkit-text-stroke: 1px rgba(51, 51, 51, 0.7);
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); // テキストに影を追加
-      }
+    h2 {
+      font-size: 2rem;
+      margin: 15px 0;
+      color: white;
+      -webkit-text-stroke: 1px rgba(51, 51, 51, 0.7);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
 
-      h3 {
-          color: white;
-          margin-bottom: 20px;
-          -webkit-text-stroke: 1px rgba(51, 51, 51, 0.7);
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-          line-height: 1.5; // 行間を広げる
-      }
+    h3 {
+      color: white;
+      margin-bottom: 20px;
+      -webkit-text-stroke: 1px rgba(51, 51, 51, 0.7);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      line-height: 1.5; // 行間を広げる
+    }
   }
 
   .search-form {
-      position: absolute; // 絶対配置
-      top: 140%; // 必要に応じて調整
-      left: 50%;
-      transform: translate(-50%, -50%); // 中央揃え
-      text-align: center; // テキストの中央揃え
+    width: 100%; // 幅を100%にして中央揃え
+    display: flex; // フレックスボックスで並べる
+    justify-content: center; // 中央揃え
 
-      .form-control {
-          margin: 5px; // 入力欄間のマージン
-      }
+    .form-control {
+      margin: 5px; // 入力欄間のマージン
+    }
   }
 
   .diagnosis {
-      position: absolute;
-      top: 80%; // 調整
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 40%;
-      text-align: center;
+    text-align: center;
+    width: 100%; // 幅を100%にして中央揃え
 
-      .diagnosis-btn {
-          text-decoration: none; /* 下線を削除 */
-          font-size: 1.5rem; // サイズ調整
-          color: rgba(51, 51, 51, 1);
-          background-color: rgba(238, 130, 125, 1);
-          padding: 12px 24px; // パディングを調整
-          border-radius: 8px;
-          box-shadow: 0 7px rgb(228, 75, 67);
-          transition: background-color 0.3s, transform 0.3s; // トランジションを追加
+    .diagnosis-btn {
+      text-decoration: none; /* 下線を削除 */
+      font-size: 1.5rem; // サイズ調整
+      color: rgba(51, 51, 51, 1);
+      background-color: rgba(238, 130, 125, 1);
+      padding: 12px 24px; // パディングを調整
+      border-radius: 8px;
+      box-shadow: 0 7px rgb(228, 75, 67);
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: rgb(233, 113, 107);
+        box-shadow: 0 7px rgb(226, 65, 56);
       }
 
-      .btn:hover {
-          background-color: rgb(233, 113, 107);
-          box-shadow: 0 7px rgb(226, 65, 56);
+      &:active {
+        box-shadow: none;
+        transform: scale(0.95); // 押されたときに縮む
       }
-
-      .diagnosis-btn:active {
-          box-shadow: none;
-          transform: scale(0.95); // 押されたときに縮む
-      }
+    }
   }
 }
