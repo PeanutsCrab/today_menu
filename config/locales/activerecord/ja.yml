@@ -1,4 +1,7 @@
 ja:
+  errors:
+    messages:
+      extension_allowlist_error: 許可されてないファイルです
   activerecord:
     models:
       user: ユーザー
