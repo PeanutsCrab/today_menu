@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'menus#top'
 
-  get 'contact', to: 'pages#contact'
   get 'terms', to: 'pages#terms'
   get 'privacy', to: 'pages#privacy'
 
