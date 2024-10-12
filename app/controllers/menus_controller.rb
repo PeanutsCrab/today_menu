@@ -1,10 +1,12 @@
 class MenusController < ApplicationController
+  include BreadcrumbsConcern
   skip_before_action :require_login, only: %i[top suggest show search]
 
   def top; end
 
   def index
     @menus = Menu.includes(:user).where(user_id: current_user.id)
+    set_breadcrumbs_index
   end
 
   def new
@@ -13,10 +15,12 @@ class MenusController < ApplicationController
 
   def show
     @menu = Menu.find(params[:id])
+    set_breadcrumbs_show
   end
 
   def edit
     @menu = current_user.menus.find(params[:id])
+    set_breadcrumbs_edit
   end
 
   def create
