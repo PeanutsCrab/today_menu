@@ -20,6 +20,9 @@
       <% end %>
       <%= render 'shared/flash_message', class: 'flash_message' %>
       <div class="content">
+        <% if logged_in? %>
+          <%= breadcrumbs separator: " > " %>
+        <% end %>
         <%= yield %>
       </div>
       <%= render 'shared/footer' %>
