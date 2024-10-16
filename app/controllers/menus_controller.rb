@@ -5,7 +5,7 @@ class MenusController < ApplicationController
   def top; end
 
   def index
-    @menus = Menu.includes(:user).where(user_id: current_user.id)
+    @menus = Menu.includes(:user).where(user_id: current_user.id).page(params[:page])
     set_breadcrumbs_index
   end
 
@@ -59,7 +59,7 @@ class MenusController < ApplicationController
   end
 
   def likes
-    @like_menus = current_user.likes_menus.includes(:user)
+    @like_menus = current_user.likes_menus.includes(:user).page(params[:page])
   end
 
   private

@@ -53,3 +53,34 @@ header {
 #hamburger-menu:hover .menu-content {
   display: block; /* ホバー時にメニューを表示 */
 }
+
+/* スマホ画面用のスタイル */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* 縦に並べる */
+    align-items: flex-start; /* 左寄せ */
+  }
+
+  .navbar-brand {
+    margin-left: 20px; /* 左のマージンを調整 */
+    font-size: 24px; /* フォントサイズを小さく */
+  }
+
+  .navbar-user {
+    margin-top: 10px; /* ユーザーセクションの上部マージン */
+    justify-content: space-between;
+    width: 100%; /* ユーザーセクションをフル幅に */
+  }
+
+  .navbar-item {
+    margin: 0; /* スマホではマージンをリセット */
+    padding: 10px; /* パディングを調整 */
+  }
+
+  /* ハンバーガーメニュー */
+  #hamburger-menu {
+    display: flex; /* ハンバーガーメニューを表示 */
+    flex-direction: column; /* 縦に並べる */
+    cursor: pointer; /* ポインターを表示 */
+  }
+}
