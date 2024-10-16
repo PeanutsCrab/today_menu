@@ -25,7 +25,7 @@ class MenusController < ApplicationController
 
   def create
     @menu = current_user.menus.build(menu_params)
-    if @menu.save
+    if @menu.save_with_tags(tag_names: params.dig(:menu, :tag_names).split(',').uniq)
       redirect_to menus_path, success: t('defaults.flash_message.created', item: Menu.model_name.human)
     else
       flash.now[:danger] = t('defaults.flash_message.not_created', item: Menu.model_name.human)
@@ -35,7 +35,7 @@ class MenusController < ApplicationController
 
   def update
     @menu = current_user.menus.find(params[:id])
-    if @menu.update(menu_params)
+    if @menu.save_with_tags(tag_names: params.dig(:menu, :tag_names).split(',').uniq)
       redirect_to menu_path(@menu), success: t('defaults.flash_message.updated', item: Menu.model_name.human)
     else
       flash.now[:danger] = t('defaults.flash_message.not_updated', item: Menu.model_name.human)
@@ -69,6 +69,6 @@ class MenusController < ApplicationController
   end
 
   def search_menu_params
-    params.fetch(:q, {}).permit(:name, :material)
+    params.fetch(:q, {}).permit(:name, :material, :tag_name)
   end
 end

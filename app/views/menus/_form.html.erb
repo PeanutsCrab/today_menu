@@ -15,6 +15,10 @@
       <%= f.text_area :process, class: "form-control", rows: "10" %>
     </div>
     <div class="mb-3">
+      <%= f.label :tag_names, t('activerecord.attributes.menu.tag_names') %>
+      <%= f.text_area :tag_names, class: "form-control", placeholder: ',で区切って入力してください' %>
+    </div>
+    <div class="mb-3">
       <%= image_tag menu.menu_image_url, class: "card-img-top", width: "300", height:"200" %>
       <%= f.label :menu_image %>
       <%= f.file_field :menu_image, class: "form-control", accept: 'image/*' %>
