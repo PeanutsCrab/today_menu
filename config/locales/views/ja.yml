@@ -54,6 +54,7 @@ ja:
       placeholders:
         name: 料理名で検索
         material: 食材で検索
+        tag_name: タグで検索
       submit: 検索
     form:
       new:

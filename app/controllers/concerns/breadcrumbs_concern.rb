@@ -20,7 +20,7 @@ module BreadcrumbsConcern
   end
 
   def referer_is_search_menus?
-    request.referer.include?("/menus/search")
+    request.referer && request.referer.include?("/menus/search") 
   end
 
   def set_breadcrumbs_show
