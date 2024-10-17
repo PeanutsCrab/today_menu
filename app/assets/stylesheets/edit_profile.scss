@@ -1,0 +1,96 @@
+/* 会員情報編集 */
+/* 会員情報編集 */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* ビューポートの最小高さを100vhに設定 */
+    padding: 2rem; /* 周囲に余白を追加 (2倍) */
+    box-sizing: border-box; /* パディングを含める */
+    overflow-y: auto; /* 縦のスクロールを許可 */
+}
+
+.profile-edit-form {
+    background: rgba(255, 255, 255, 1);
+    padding: 4rem; /* パディングを2倍に変更 */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* シャドウを強調 */
+    width: 95%; /* 幅はそのまま */
+    max-width: 1200px; /* 最大幅を600pxから1200pxに変更 */
+    margin: auto; /* 中央に配置 */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .profile-edit-form {
+        padding: 3rem; /* パディングを調整 */
+    }
+
+    .profile-edit-form h1 {
+        font-size: 2rem; /* フォントサイズを少し小さく */
+    }
+
+    .profile-edit-form .btn {
+        width: 60%; /* 幅を60%に変更 */
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-edit-form {
+        padding: 2rem; /* パディングをさらに小さく */
+    }
+
+    .profile-edit-form h1 {
+        font-size: 1.5rem; /* フォントサイズを小さく */
+    }
+
+    .profile-edit-form .btn {
+        width: 100%; /* 幅を100%に変更 */
+        font-size: 0.9rem; /* フォントサイズを少し小さく */
+    }
+}
+
+/* 見出し */
+.profile-edit-form h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 3rem; /* マージンを2倍に変更 */
+    font-size: 2.5rem; /* フォントサイズを2倍に */
+}
+
+/* 入力フィールド */
+.profile-edit-form .form-control {
+    width: 100%;
+    padding: 1rem; /* パディングを2倍に変更 */
+    margin-bottom: 2rem; /* マージンを2倍に変更 */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* ボタン */
+.profile-edit-form .btn {
+    padding: 0.5rem; /* パディングを半分に */
+    font-size: 1rem; /* フォントサイズを調整 */
+    width: 30%; /* 幅を半分に */
+    margin: 0 auto; /* 中央揃え */
+    display: block; /* ブロック要素として表示 */
+    background: #007bff;
+    color: white;
+}
+
+.profile-edit-form .btn:hover {
+    background: #0056b3;
+}
+
+/* リンク */
+.text-center a {
+    display: block;
+    color: #007bff;
+    text-align: center;
+    margin-top: 1rem; /* マージンを2倍に変更 */
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
