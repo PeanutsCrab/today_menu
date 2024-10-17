@@ -28,59 +28,59 @@ header {
   margin: 0px 40px 0px 15px;
   text-decoration: none;
   color: rgba(51, 51, 51, 1);
-  position: relative; /* 子要素の位置を調整 */
+  position: relative;
 }
 
 .menu-content {
-  display: none; /* デフォルトでは非表示 */
-  position: absolute; /* 絶対位置に設定 */
-  top: 100%; /* 親要素の下に配置 */
+  display: none;
+  position: absolute;
+  top: 100%;
   right: 0;
   width: 250%;
   border-radius: 3px;
-  background-color: rgba(255, 255, 255, 1); /* 背景色を設定 */
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 100; /* 他の要素の上に表示 */
+  z-index: 100;
 }
 
 .menu-item {
-  display: block; /* メニュー項目をブロック表示 */
-  padding: 10px 20px; /* パディングを設定 */
+  display: block;
+  padding: 10px 20px;
   text-decoration: none;
   color: rgba(51, 51, 51, 1);
 }
 
 #hamburger-menu:hover .menu-content {
-  display: block; /* ホバー時にメニューを表示 */
+  display: block;
 }
 
 /* スマホ画面用のスタイル */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* 縦に並べる */
-    align-items: flex-start; /* 左寄せ */
+    flex-direction: row; /* 横並びに戻す */
+    align-items: center; /* 中央揃え */
+    justify-content: space-between; /* 両端に配置 */
   }
 
   .navbar-brand {
-    margin-left: 20px; /* 左のマージンを調整 */
-    font-size: 24px; /* フォントサイズを小さく */
+    margin-left: 20px;
+    font-size: 24px;
   }
 
   .navbar-user {
-    margin-top: 10px; /* ユーザーセクションの上部マージン */
-    justify-content: space-between;
-    width: 100%; /* ユーザーセクションをフル幅に */
+    margin-left: auto; /* ログイン/マイページを右端に寄せる */
   }
 
   .navbar-item {
-    margin: 0; /* スマホではマージンをリセット */
+    margin: 0 10px; /* マージンを調整 */
     padding: 10px; /* パディングを調整 */
   }
 
   /* ハンバーガーメニュー */
   #hamburger-menu {
-    display: flex; /* ハンバーガーメニューを表示 */
-    flex-direction: column; /* 縦に並べる */
-    cursor: pointer; /* ポインターを表示 */
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
   }
 }
+
