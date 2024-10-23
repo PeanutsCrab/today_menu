@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   root 'menus#top'
 
   get 'terms', to: 'pages#terms'
   get 'privacy', to: 'pages#privacy'
 
-  resources :users, only: %i[new create]
+  resources :users, only: %i[new create destroy]
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
@@ -18,6 +20,7 @@ Rails.application.routes.draw do
   end
   resources :likes, only: %i[create destroy]
   resource :profile, only: %i[edit update]
+  resources :password_resets, only: %i[new create edit update]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

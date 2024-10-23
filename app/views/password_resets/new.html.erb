@@ -2,14 +2,12 @@
 <div class="profile-container">
   <div class="profile-edit-form">
     <h1><%= t('.title') %></h1>
-    <%= form_with model: @user, url: profile_path, method: :put do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+    <%= form_with url: password_resets_path, local: true, method: :post do |f| %>
       <div class="input-block">
         <%= f.label :email, class: "form-label" %>
         <%= f.email_field :email, class: "form-control" %>
       </div>
       <%= f.submit class: "btn" %>
     <% end %>
-    <%= link_to t('.delete_user'), user_path(current_user), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_user') } %>
   </div>
 </div>

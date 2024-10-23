@@ -16,6 +16,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    user = current_user
+    user.destroy!
+    redirect_to root_path, success: t('defaults.flash_message.deleted', item: User.model_name.human)
+  end
+
   private
 
   def user_params
