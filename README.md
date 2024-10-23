@@ -70,4 +70,3 @@
 ### LINE通知
 * 今日の献立を通知する機能
 * LINE Messaging APIを使用
-tpra feth dgmr ztnk
