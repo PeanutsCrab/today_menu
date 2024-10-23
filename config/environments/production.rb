@@ -104,7 +104,7 @@ Rails.application.configure do
     #gmail２段階認証回避のためにアプリケーションでの利用パスワードを取得、必ずcredentials.yml.endに設定を！！
     password: Rails.application.credentials.gmail[:password],
     #パスワードをBase64でエンコード
-    authentication: :login
+    authentication: :login,
     enable_starttls_auto: true  
   }
   # Enable DNS rebinding protection and other `Host` header attacks.
