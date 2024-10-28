@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   resources :likes, only: %i[create destroy]
   resource :profile, only: %i[edit update]
   resources :password_resets, only: %i[new create edit update]
+
+  post "oauth/callback" => "oauths#callback"
+  get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

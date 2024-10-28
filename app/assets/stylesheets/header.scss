@@ -1,5 +1,5 @@
 header {
-  padding: 25px 0px;
+  padding: 25px 0;
   background-color: rgba(238, 130, 125, 1);
 }
 
@@ -25,10 +25,27 @@ header {
 }
 
 .navbar-item {
-  margin: 0px 40px 0px 15px;
+  margin: 0 40px 0 15px;
   text-decoration: none;
   color: rgba(51, 51, 51, 1);
   position: relative;
+}
+
+.navbar-line-login {
+  display: flex;
+  align-items: center;
+  background-color: #00C300; // LINEグリーン
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #00B000; // ホバー時の濃いグリーン
+  }
 }
 
 .menu-content {
@@ -57,9 +74,9 @@ header {
 /* スマホ画面用のスタイル */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row; /* 横並びに戻す */
-    align-items: center; /* 中央揃え */
-    justify-content: space-between; /* 両端に配置 */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .navbar-brand {
@@ -68,12 +85,12 @@ header {
   }
 
   .navbar-user {
-    margin-left: auto; /* ログイン/マイページを右端に寄せる */
+    margin-left: auto;
   }
 
   .navbar-item {
-    margin: 0 10px; /* マージンを調整 */
-    padding: 10px; /* パディングを調整 */
+    margin: 0 10px;
+    padding: 10px;
   }
 
   /* ハンバーガーメニュー */
@@ -83,4 +100,5 @@ header {
     cursor: pointer;
   }
 }
+
 
