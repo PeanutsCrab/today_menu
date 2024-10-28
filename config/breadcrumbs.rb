@@ -42,6 +42,11 @@ crumb :terms_path do
   parent :root
 end
 
+crumb :edit_profile_path do
+  link '会員情報変更', edit_profile_path
+  parent :root
+end
+
 # 投稿編集
 crumb :edit_menu_path do
   link '献立編集', edit_menu_path
