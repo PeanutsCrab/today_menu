@@ -4,11 +4,11 @@ class OauthsController < ApplicationController
   # sends the user on a trip to the provider,
   # and after authorizing there back to the callback url.
   def oauth
-    login_at(auth_params[:provider])
+    login_at(params[:provider])
   end
       
   def callback
-    provider = auth_params[:provider]
+    provider = params[:provider]
     if @user = login_from(provider)
       redirect_to root_path, success: t('user_sessions.create.success')
     else
@@ -29,9 +29,9 @@ class OauthsController < ApplicationController
   #example for Rails 4: add private method below and use "auth_params[:provider]" in place of 
   #"params[:provider] above.
 
-  private
+  # private
 
-  def auth_params
-    params.permit(:code, :provider, :error, :state)
-  end
+  # def auth_params
+    # params.permit(:code, :provider, :error, :state)
+  # end
 end
