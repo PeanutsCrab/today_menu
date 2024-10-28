@@ -3,6 +3,9 @@
     <%= link_to t('menus.top.today_menus'), root_path, class: 'navbar-brand' %>
     <div class='navbar-user'>
       <div class='dropdown-divider'></div>
+      <%= link_to auth_at_provider_path(:provider => :line), class: 'navbar-line-login' do %>
+        <i class="bi bi-line"></i> LINEでログイン
+      <% end %>
       <%= link_to t('header.create_user'), new_user_path, class: 'navbar-item' %>
       <%= link_to t('header.login'), login_path, class: 'navbar-item' %>
     </div>
