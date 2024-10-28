@@ -102,7 +102,7 @@ Rails.application.configure do
     user_name: ENV['GMAIL_USERNAME'],
     password: ENV['GMAIL_PASSWORD'],
     #パスワードをBase64でエンコード
-    authentication: :login
+    authentication: :login,
     enable_starttls_auto: true  
   }
   # Enable DNS rebinding protection and other `Host` header attacks.
