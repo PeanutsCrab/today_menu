@@ -221,12 +221,13 @@ Rails.application.config.sorcery.configure do |config|
 
   config.line.key = ENV['LINE_KEY']
   config.line.secret = ENV['LINE_SECRET']
-  # config.line.callback_url = 'http://localhost:3000/oauth/callback?provider=line'
+  # 開発環境
+  # config.line.callback_url = 'https://2fa5-36-8-147-169.ngrok-free.app/oauth/callback?provider=line'
   # 本番環境
   config.line.callback_url = 'https://today-menu.onrender.com/oauth/callback?provider=line'
   config.line.scope = "profile"
-  # config.line.bot_prompt = "normal"
-  # config.line.user_info_mapping = {name: '今日何食べる？'}
+  config.line.bot_prompt = "normal"
+  config.line.user_info_mapping = {email: 'userId'}
 
   
   # For information about Discord API
