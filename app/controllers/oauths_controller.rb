@@ -18,10 +18,10 @@ class OauthsController < ApplicationController
 
         reset_session # protect from session fixation attack
         auto_login(@user)
-        redirect_to login_path, success: t('user_sessions.create.success')
+        redirect_to root_path, success: t('user_sessions.create.success')
       rescue
         flash.now[:danger] = t('user_sessions.create.failure')
-        redirect_to new_user_path, status: :unprocessable_entity
+        redirect_to root_path, status: :unprocessable_entity
       end
     end
   end
