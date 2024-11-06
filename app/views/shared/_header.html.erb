@@ -10,7 +10,7 @@
           <%= link_to t('header.board'), new_menu_path, class: 'menu-item' %>
           <%= link_to t('header.board_index'), menus_path, class: 'menu-item' %>
           <%= link_to t('header.bookmark_index'), likes_menus_path, class: 'menu-item' %>
-          <%= link_to t('header.line'), '#', class: 'menu-item' %>
+          <%= link_to t('header.line'), line_path, class: 'menu-item' %>
           <%= link_to t('header.logout'), logout_path, class: 'menu-item', data: { turbo_method: :delete } %>
         </div>
       </div>

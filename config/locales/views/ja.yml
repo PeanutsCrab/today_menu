@@ -82,7 +82,7 @@ ja:
     board: 献立投稿
     board_index: 投稿一覧
     bookmark_index: お気に入り一覧
-    line: LINE通知
+    line: LNE友だち追加
   footer:
     inquiry: お問い合わせ
     terms: 利用規約
@@ -92,6 +92,9 @@ ja:
       title: 利用規約
     privacy:
       title: プライバシーポリシー
+    line:
+      title: LNE友だち追加
+      frend: 友達登録！
   profiles:
     edit:
       title: 会員情報編集
