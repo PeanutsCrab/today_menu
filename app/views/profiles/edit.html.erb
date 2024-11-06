@@ -3,14 +3,17 @@
 <div class="profile-container">
   <div class="profile-edit-form">
     <h1><%= t('.title') %></h1>
-    <%= form_with model: @user, url: profile_path, method: :put do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-      <div class="input-block">
-        <%= f.label :email, class: "form-label" %>
-        <%= f.email_field :email, class: "form-control" %>
-      </div>
-      <%= f.submit class: "btn" %>
-    <% end %>
+    <% if @user.email.include('@') %>
+      <%= form_with model: @user, url: profile_path, method: :put do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div class="input-block">
+          <%= f.label :email, class: "form-label" %>
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+        <%= f.submit class: "btn" %>
+      <% end %>
+    <% else %>
+      <h2><%= t('.line_user') %></h2>
     <%= link_to t('.delete_user'), user_path(current_user), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_user') } %>
   </div>
 </div>
