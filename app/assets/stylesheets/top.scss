@@ -1,12 +1,15 @@
 body {
   height: 100%; /* 高さを100%に設定 */
   margin: 0; /* デフォルトのマージンを削除 */
+  width: 100vw; /* 横幅を100%に設定 */
+  overflow-x: hidden; /* 横スクロールを隠す */
 }
 
 .layout {
   display: flex;
   flex-direction: column; /* 縦に並べる */
   min-height: 100vh; /* 最小高さを100vhに設定 */
+  width: 100%; /* 横幅を100%に設定 */
 }
 
 .content {

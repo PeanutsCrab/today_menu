@@ -98,6 +98,7 @@ ja:
   profiles:
     edit:
       title: 会員情報編集
+      line_user: メールアドレスでユーザー登録している方のみの機能になります。
       delete_user: 退会する
   password_resets:
     new:
