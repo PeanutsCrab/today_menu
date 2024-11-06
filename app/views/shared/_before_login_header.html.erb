@@ -1,16 +1,20 @@
 <header>
-  <nav class='navbar'>
+  <nav class="navbar">
     <%= link_to t('menus.top.today_menus'), root_path, class: 'navbar-brand' %>
-    <div class='navbar-user'>
-      <div class='dropdown-divider'></div>
+    <div class="navbar-user">
       <%= link_to 'https://page.line.me/463wwxxg', class: 'navbar-line-login' do %>
         <i class="bi bi-line"></i> 友だち追加！
       <% end %>
       <%= link_to auth_at_provider_path(:provider => :line), class: 'navbar-line-login' do %>
-        <i class="bi bi-line"></i> LINEログイン
+        <i class="bi bi-line"></i> LINEでログイン
       <% end %>
-      <%= link_to t('header.create_user'), new_user_path, class: 'navbar-item' %>
-      <%= link_to t('header.login'), login_path, class: 'navbar-item' %>
+      <div class="navbar-item" id="hamburger-menu">
+        <i class="bi bi-card-list" style="font-size: 1.5em;"></i>
+        <div class="menu-content">
+          <%= link_to t('header.create_user'), new_user_path, class: 'menu-item' %>
+          <%= link_to t('header.login'), login_path, class: 'menu-item' %>
+        </div>
+      </div>
     </div>
   </nav>
 </header>
