@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'terms', to: 'pages#terms'
   get 'privacy', to: 'pages#privacy'
+  get 'line', to: 'pages#line'
 
   resources :users, only: %i[new create destroy]
   get 'login', to: 'user_sessions#new'

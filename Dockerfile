@@ -16,6 +16,11 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y curl libjemalloc2 libvips postgresql-client && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
+# COPY crontab /etc/cron.d/my-cron-job
+
+# RUN chmod 0644 /etc/cron.d/my-cron-job && \
+    # crontab /etc/cron.d/my-cron-job
+
 # Set production environment
 ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
@@ -81,3 +86,4 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
+# CMD service cron start && ./bin/rails server
