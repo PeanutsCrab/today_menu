@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   include BreadcrumbsConcern
-  skip_before_action :require_login, only: %i[top suggest show search]
+  skip_before_action :require_login, only: %i[top suggest show search autocomplete]
 
   def top; end
 
@@ -35,7 +35,7 @@ class MenusController < ApplicationController
 
   def update
     @menu = current_user.menus.find(params[:id])
-    if @menu.save_with_tags(tag_names: params.dig(:menu, :tag_names).split(',').uniq)
+    if @menu.update(menu_params) && @menu.save_with_tags(tag_names: params.dig(:menu, :tag_names).split(',').uniq)
       redirect_to menu_path(@menu), success: t('defaults.flash_message.updated', item: Menu.model_name.human)
     else
       flash.now[:danger] = t('defaults.flash_message.not_updated', item: Menu.model_name.human)
@@ -56,6 +56,12 @@ class MenusController < ApplicationController
   def search
     @search_form = SearchMenusForm.new(search_menu_params)
     @search_results = @search_form.search
+  end
+
+  def autocomplete
+    query = params[:q]
+    results = Menu.where('name LIKE ?', "%#{query}%").limit(5)
+    render json: results.map { |menu| { label: menu.name, value: menu.name } }
   end
 
   def likes

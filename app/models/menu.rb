@@ -16,8 +16,8 @@ class Menu < ApplicationRecord
 
   def save_with_tags(tag_names:)
     ActiveRecord::Base.transaction do
-    self.tags = tag_names.map { |name| Tag.find_or_initialize_by(name: name.strip) }
-    save!
+      self.tags = tag_names.map { |name| Tag.find_or_initialize_by(name: name.strip) }
+      save!
     end
   rescue StandardError
     false

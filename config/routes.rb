@@ -17,6 +17,7 @@ Rails.application.routes.draw do
       get :suggest
       get :search
       get :likes
+      get :autocomplete
     end
   end
   resources :likes, only: %i[create destroy]
