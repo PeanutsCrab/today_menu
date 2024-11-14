@@ -13,7 +13,7 @@
         <%= f.submit class: "btn" %>
       <% end %>
     <% else %>
-      <h3><%= t('.line_user') %></h2>
+      <h3><%= t('.line_user') %></h3>
       <%= link_to t('.delete_user'), user_path(current_user), data: { turbo_method: :delete, turbo_confirm: t('defaults.delete_user') } %>
     <% end %>
   </div>
