@@ -101,3 +101,25 @@ header {
     font-size: 0.8em;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-user {
+    margin-left: auto; /* スマホ画面で右寄せ */
+  }
+
+  .navbar-item {
+    margin: 0 10px;
+  }
+
+  /* スマホ用 navbar-line-login ボタンのサイズ調整 */
+  .navbar-line-login {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+}
