@@ -1,5 +1,5 @@
 footer {
-  padding: 10px 0px;
+  padding: 10px 0;
   background-color: rgba(238, 130, 125, 1);
 }
 
@@ -11,7 +11,7 @@ footer {
 
 .nav-link {
   font-size: 12px;
-  margin: 0px 40px;
+  margin: 0 40px;
   display: block; /* 各リンクをブロック要素として表示 */
   text-decoration: none; /* 下線を削除 */
   color: rgba(51, 51, 51, 1);
@@ -60,40 +60,40 @@ footer {
 /* レスポンシブ */
 @media (max-width: 768px) {
   .term {
-      padding: 15px;
+    padding: 15px;
   }
 
   .term h1 {
-      font-size: 1.8em;
+    font-size: 1.8em;
   }
 
   .term h2 {
-      font-size: 1.4em;
+    font-size: 1.4em;
   }
 
   .term p {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 480px) {
   .term {
-      padding: 10px;
+    padding: 10px;
   }
 
   .term h1 {
-      font-size: 1.6em;
+    font-size: 1.6em;
   }
 
   .term h2 {
-      font-size: 1.2em;
+    font-size: 1.2em;
   }
 
   .term p {
-      font-size: 0.9em;
+    font-size: 0.9em;
   }
 
   .term ul {
-      padding-left: 15px;
+    padding-left: 15px;
   }
 }

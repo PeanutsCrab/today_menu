@@ -1,75 +1,75 @@
 .line-profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 2rem;
-    box-sizing: border-box;
-    overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .line-profile-edit-form {
-    background: rgba(255, 255, 255, 1);
-    padding: 4rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 95%;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+  background: rgba(255, 255, 255, 1);
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
 }
 
 .line-top-explanation h3 {
-    color: #007bff;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .line-navbar-login {
-    display: inline-flex;
-    align-items: center;
-    background-color: #00C300; /* LINEグリーン */
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.25rem;
-    transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  background-color: #00c300; /* LINEグリーン */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease;
 }
 
 .line-navbar-login:hover {
-    background-color: #00B000;
+  background-color: #00b000;
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .line-profile-edit-form {
-        padding: 2.5rem;
-    }
+  .line-profile-edit-form {
+    padding: 2.5rem;
+  }
 
-    .line-top-explanation h3 {
-        font-size: 1.5rem;
-    }
+  .line-top-explanation h3 {
+    font-size: 1.5rem;
+  }
 
-    .line-navbar-login {
-        font-size: 1.1rem;
-        padding: 0.6rem 1.2rem;
-    }
+  .line-navbar-login {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .line-profile-edit-form {
-        padding: 2rem;
-    }
+  .line-profile-edit-form {
+    padding: 2rem;
+  }
 
-    .line-top-explanation h3 {
-        font-size: 1.25rem;
-    }
+  .line-top-explanation h3 {
+    font-size: 1.25rem;
+  }
 
-    .line-navbar-login {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
+  .line-navbar-login {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }

@@ -15,7 +15,7 @@
   max-height: 256px;
   display: flex; /* フレックスボックスを使用 */
   flex-direction: column; /* 縦に並べる */
-  max-width: 340px;  /* お好みの最大幅に設定 */
+  max-width: 340px; /* お好みの最大幅に設定 */
 }
 
 .menu-detail-board {
@@ -40,9 +40,9 @@
   flex-direction: column; /* 縦に並べる */
 }
 
-/*.card-img-top {
-  width: 100%;  画像の幅を100%に
-  height: auto;  高さは自動調整
+/* .card-img-top {
+  width: 100%; 画像の幅を100%に
+  height: auto; 高さは自動調整
 } */
 
 .card-body {
@@ -64,7 +64,7 @@
 
 @media (max-width: 1200px) {
   .menu-board {
-    flex: 1 1 calc(50% - 20px);; /* 画面が小さいときは3列に */
+    flex: 1 1 calc(50% - 20px); /* 画面が小さいときは3列に */
   }
 }
 
