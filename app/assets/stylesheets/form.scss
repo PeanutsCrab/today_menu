@@ -1,46 +1,46 @@
 /* コンテナ */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* ビューポートの最小高さを100vhに設定 */
-    padding: 1rem; /* 周囲に余白を追加 */
-    box-sizing: border-box; /* パディングを含める */
-    overflow-y: auto; /* 縦のスクロールを許可 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ビューポートの最小高さを100vhに設定 */
+  padding: 1rem; /* 周囲に余白を追加 */
+  box-sizing: border-box; /* パディングを含める */
+  overflow-y: auto; /* 縦のスクロールを許可 */
 }
 
 /* フォーム */
 .form {
-    background: rgba(255, 255, 255, 1);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* 幅を90%に設定 */
-    max-width: 600px;
-    margin: auto; /* 中央に配置 */
+  background: rgba(255, 255, 255, 1);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* 幅を90%に設定 */
+  max-width: 600px;
+  margin: auto; /* 中央に配置 */
 }
 
 /* スマートフォンや小さい画面用 */
 @media (max-width: 576px) {
-    .form {
-        width: 95%; /* 幅を95%に設定 */
-    }
+  .form {
+    width: 95%; /* 幅を95%に設定 */
+  }
 }
 
 /* 見出し */
 .form h1 {
-    text-align: center;
-    color: #007bff;
-    margin-bottom: 1.5rem;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 1.5rem;
 }
 
 /* 入力フィールド */
 .form .form-control {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
 }
 
 .autocomplete-list {
@@ -82,28 +82,28 @@
 
 /* ボタン */
 .form .btn {
-    width: 100%;
-    padding: 0.5rem;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 100%;
+  padding: 0.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .form .btn:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 
 /* リンク */
 .text-center a {
-    display: block;
-    color: #007bff;
-    text-align: center;
-    margin-top: 0.5rem;
-    text-decoration: none;
+  display: block;
+  color: #007bff;
+  text-align: center;
+  margin-top: 0.5rem;
+  text-decoration: none;
 }
 
 .text-center a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
