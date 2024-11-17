@@ -116,4 +116,10 @@ header {
   .navbar-item {
     margin: 0 10px;
   }
+
+  /* スマホ用 navbar-line-login ボタンのサイズ調整 */
+  .navbar-line-login {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
 }

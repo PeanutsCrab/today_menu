@@ -59,6 +59,18 @@
   z-index: 1000;
 }
 
+@media (max-width: 768px) {
+    .autocomplete-list {
+      font-size: 0.8em;
+    }
+  }
+
+@media (max-width: 480px) {
+  .autocomplete-list {
+    font-size: 0.6em;
+  }
+}
+
 .autocomplete-item {
   padding: 8px 12px;
   cursor: pointer;

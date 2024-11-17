@@ -94,6 +94,10 @@ body {
   transform: scale(0.95); /* 押されたときに縮む */
 }
 
+/* {
+  outline: 2px solid blue;
+}
+
 /* レスポンシブデザイン */
 @media screen and (max-width: 768px) {
   .top-inner-text {
