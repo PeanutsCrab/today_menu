@@ -1,5 +1,15 @@
-.yml
-.md
+.github/workflows/docker-image.yml
+.rubocop.yml
+compose.yml
+config/database.yml
+config/locales/activerecord/ja.yml
+config/locales/views/ja.yml
+config/settings/development.yml
+config/settings/test.yml
+config/storage.yml
+entity_relationship/README.md
+README.md
+wireframe/README.md
 public/404.html
 public/406-unsupported-browser.html
 public/422.html
