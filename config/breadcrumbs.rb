@@ -52,6 +52,11 @@ crumb :line_path do
   parent :root
 end
 
+crumb :use_path	 do
+  link '使い方ガイド', use_path	
+  parent :root
+end
+
 # 投稿編集
 crumb :edit_menu_path do
   link '献立編集', edit_menu_path
