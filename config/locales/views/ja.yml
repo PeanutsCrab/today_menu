@@ -34,6 +34,7 @@ ja:
     top:
       today_menus: 今日何食べる？
       diagnosis: 診断スタート！
+      how_to_use: 使い方ガイド
     new:
       title: 献立作成
     index:
@@ -95,6 +96,8 @@ ja:
     line:
       title: LNE友だち追加
       frend: 友達登録！
+    use:
+      title: 使い方ガイド
   profiles:
     edit:
       title: 会員情報編集
